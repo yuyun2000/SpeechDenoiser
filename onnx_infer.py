@@ -30,7 +30,7 @@ output_names = ["enhanced_audio_frame", "new_states", "lsnr"]
 #------------------------------load wav
 hop_size = 480
 fft_size = 960
-input_audio, sr = torchaudio.load('./examples/A1CIM28ZUCA8RX_M_Street_Near_Regular_SP_Mobile_Primary.wav', channels_first=True)
+input_audio, sr = torchaudio.load('./inp.wav', channels_first=True)
 input_audio = input_audio.mean(dim=0).unsqueeze(0)  # stereo to mono
 
 input_audio = input_audio.squeeze(0)
